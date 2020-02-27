@@ -12,7 +12,7 @@ export default class Footer extends React.Component {
                     <div id="footer_contents">
                         <span className="float_left">UTC: {new Date().toUTCString()}</span>
                         <span className="float_right">
-                            &copy; LS/KEM Industries
+                            &copy; copy here
                         </span>
                         <div className="clear_both"></div>
                     </div>
