@@ -60,7 +60,7 @@ export default function SwipeableTemporaryDrawer() {
                   <a href={Routes.INDEX}>Home</a>
                 </div>
               <div className="title_sub">
-                software engineer
+                subtitle
               </div>
           </div>
           <div className="nav_container">
