@@ -1,0 +1,52 @@
+$COLOR_PRIMARY: #0e4220;
+$COLOR_PRIMARY_TEXT: #FFF;
+
+$COLOR_BACKGROUND: #FFF;
+
+$SCREEN_SIZE_SMALL: 500px;
+$SCREEN_SIZE_MEDIUM: 500px;
+$SCREEN_SIZE_LARGE: 800px;
+
+* {
+	font-family: "Roboto", "Helvetica", "Arial", sans-serif
+}
+
+body, #page_wrapper {
+	background-color: $COLOR_BACKGROUND;
+	min-width:480px;
+	-webkit-box-sizing: border-box;
+ 	box-sizing: border-box;
+}
+
+.center {
+	margin:0px auto;
+}
+
+.position_relative {
+    position:relative;
+}
+
+.error{
+    color:red;
+}
+
+.clear_both { 
+	clear:both; height:1px; 
+}
+
+.hidden { 
+	display:none; 
+}
+
+.right_align {
+	text-align:right;
+}
+
+.float_right {
+    float:right;
+}
+
+.float_left {
+    float:left;
+}
+
