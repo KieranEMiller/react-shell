@@ -2,7 +2,6 @@
 import ReactDOM from 'react-dom';
 import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom'
 
-import Header from          './header.jsx';
 import Index from           './paths/index.jsx';
 import { Routes } from      './constants.jsx';
 
