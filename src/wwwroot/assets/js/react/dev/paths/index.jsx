@@ -1,10 +1,6 @@
 ﻿import React from 'react';
-import ReactDOM from 'react-dom';
-import { Link } from 'react-router-dom';
-
 import BaseComponent from './base_component.jsx';
 import ContentContainer from '../content.jsx';
-import { Routes } from '../constants.jsx';
 
 class Index extends BaseComponent {
 
@@ -16,7 +12,12 @@ class Index extends BaseComponent {
         return (
             <ContentContainer>
                 <div className="content_row">
-                    
+                    blah blah
+
+                    this is a test of the thasdf
+
+
+
                 </div>
             </ContentContainer>
         );
