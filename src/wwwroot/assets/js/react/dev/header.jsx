@@ -10,7 +10,6 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from '@material-ui/icons/Menu';
-import Typography from "@material-ui/core/Typography";
 import { Link } from 'react-router-dom';
 
 import {Routes} from './constants.jsx';
@@ -58,7 +57,7 @@ export default function SwipeableTemporaryDrawer() {
           </IconButton>
           <div id="title_block">
               <div className="title">
-                  <a href={Routes.INDEX}>Kieran E. Miller</a>
+                  <a href={Routes.INDEX}>Home</a>
                 </div>
               <div className="title_sub">
                 software engineer
@@ -88,8 +87,6 @@ export default function SwipeableTemporaryDrawer() {
           <List>
             {[
                 {display:"Home", href:Routes.INDEX}, 
-                {display:"Projects", href:Routes.PROJECTS}, 
-                {display:"Contact", href:Routes.CONTACT},
                 {display:"About", href:Routes.ABOUT}
               ].map((item, index) => (
               <ListItem button component="a" key={item.href} href={item.href}>
