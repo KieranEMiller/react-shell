@@ -65,7 +65,7 @@ export default function SwipeableTemporaryDrawer() {
           </div>
           <div className="nav_container">
               <ul>
-                <li><Link to={Routes.CONTACT}>Home</Link></li>
+                <li><Link to={Routes.INDEX}>Home</Link></li>
                 <li><Link to={Routes.ABOUT}>About</Link></li>
               </ul>
 
