@@ -24,6 +24,23 @@
 			max-width: $SCREEN_SIZE_LARGE;
 			padding:5px;
 		}
+
+		h1 {
+			font-size: 1.5em;
+			text-align:center;
+			font-weight:bolder;
+
+			@media screen and (min-width: $SCREEN_SIZE_SMALL) {
+				font-size:2em;
+			}
+			@media screen and (min-width: $SCREEN_SIZE_MEDIUM) {
+				font-size:3em;
+			}
+			@media screen and (min-width: $SCREEN_SIZE_LARGE) {
+				font-size:4em;
+			}
+		}
+
 		h2 {
 			border-bottom: solid #000000 5px;
 			margin-bottom: 10px;
@@ -50,4 +67,3 @@
 		}
 	}
 }
-
