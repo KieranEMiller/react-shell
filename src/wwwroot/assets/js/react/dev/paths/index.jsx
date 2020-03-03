@@ -1,6 +1,8 @@
 ﻿import React from 'react';
 import BaseComponent from './base_component.jsx';
 import ContentContainer from '../content.jsx';
+import { Link } from 'react-router-dom';
+import {Routes} from '../constants.jsx';
 
 class Index extends BaseComponent {
 
@@ -11,14 +13,10 @@ class Index extends BaseComponent {
     render() {
         return (
             <ContentContainer>
-                <div className="content_row">
-                    blah blah
-
-                    this is a test of the thasdf
-
-
-
-                </div>
+                <h1>
+                    Imagine a world...
+                </h1>
+                <div className="center"><Link to={Routes.ABOUT}>(click or tap to continue)</Link></div>
             </ContentContainer>
         );
     }
