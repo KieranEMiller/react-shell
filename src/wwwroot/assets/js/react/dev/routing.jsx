@@ -1,21 +1,61 @@
-﻿import React from 'react';
-import ReactDOM from 'react-dom';
-import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom'
+﻿import React from "react";
+import styled from "styled-components";
+import { Switch, Route, withRouter } from "react-router-dom";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 
-import Index from           './paths/index.jsx';
-import { Routes } from      './constants.jsx';
+import Index from "./paths/index.jsx";
+import About from "./paths/about.jsx";
 
-class Routing extends React.Component {
-    render() {
-        return (
-            <div>
-                <Switch>
-                    <Route exact path={Routes.DEFAULT} component={Index} />
-                    <Route exact path={Routes.INDEX} component={Index} />
-                </Switch>
-            </div>
-        );
-    }
+
+function Container({ location }) {
+  return (
+    <Wrapper>
+        <TransitionGroup className="transition-group">
+          <CSSTransition
+            key={location.key}
+            timeout={{ enter: 300, exit: 300 }}
+            classNames="fade"
+          >
+            <section className="route-section">
+              <Switch location={location}>
+                <Route exact path="/" component={Index} />
+                <Route path="/about" component={About} />
+              </Switch>
+            </section>
+          </CSSTransition>
+        </TransitionGroup>
+      </Wrapper>
+  );
 }
 
-export default Routing;
+const Wrapper = styled.div`
+  .fade-enter {
+    opacity: 0.01;
+  }
+
+  .fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 300ms ease-in;
+  }
+
+  .fade-exit {
+    opacity: 1;
+  }
+
+  .fade-exit.fade-exit-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
+  }
+
+  div.transition-group {
+    position: relative;
+  }
+
+  section.route-section {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+`;
+export default withRouter(Container);
