@@ -6,7 +6,6 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 import Index from "./paths/index.jsx";
 import About from "./paths/about.jsx";
 
-
 function Container({ location }) {
   return (
     <Wrapper>
@@ -19,7 +18,7 @@ function Container({ location }) {
             <section className="route-section">
               <Switch location={location}>
                 <Route exact path="/" component={Index} />
-                <Route path="/about" component={About} />
+                <Route exact path="/about" component={About} />
               </Switch>
             </section>
           </CSSTransition>
@@ -35,7 +34,7 @@ const Wrapper = styled.div`
 
   .fade-enter.fade-enter-active {
     opacity: 1;
-    transition: opacity 300ms ease-in;
+    transition: opacity 700ms ease-in;
   }
 
   .fade-exit {
@@ -44,11 +43,11 @@ const Wrapper = styled.div`
 
   .fade-exit.fade-exit-active {
     opacity: 0.01;
-    transition: opacity 300ms ease-in;
+    transition: opacity 700ms ease-in;
   }
 
   div.transition-group {
-    position: relative;
+    /*position: relative;*/
   }
 
   section.route-section {
